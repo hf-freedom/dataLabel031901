@@ -1,5 +1,7 @@
 package com.todo.dto;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
@@ -17,6 +19,7 @@ public class TodoRequest {
 
     private Integer priority = 2;
 
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private LocalDateTime dueTime;
 
     private Integer status;
